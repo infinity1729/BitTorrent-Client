@@ -5,6 +5,10 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(lib)
 include_directories(include)
 
+#Dependencies
+execute_process(COMMAND sudo apt-get update)
+execute_process(COMMAND sudo apt-get install -y libcurl4-openssl-dev libssl-dev libgtest-dev pkg_config)
+
 # Bencoding
 file(GLOB BENCODING_SRC "lib/bencode/*.cpp" "include/bencode/*.h")
 add_library(bencoding STATIC ${BENCODING_SRC})
