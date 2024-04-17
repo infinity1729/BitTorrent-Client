@@ -21,7 +21,7 @@ set_target_properties(cxxopts PROPERTIES LINKER_LANGUAGE CXX)
 
 # cpr
 include(FetchContent)
-FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/whoshuu/cpr.git)
+FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/whoshuu/cpr.git GIT_TAG c8d33915dbd88ad6c92b258869b03aba06587ff9) # the commit hash for 1.5.0
 FetchContent_MakeAvailable(cpr)
 
 find_package(CURL)
